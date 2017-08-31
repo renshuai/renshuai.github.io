@@ -101,7 +101,7 @@
 <meta property="og:site_name" content="前端小白">
 <meta property="og:description" content="video标签简介html5中的video的标签，使得页面中使用视频变得简单了很多，与引入图片的方式类似，我们使用video标签指定src属性即可引入视频。 video用法1&amp;lt;video src=&quot;test.mp4&quot;&amp;gt;&amp;lt;/video&amp;gt; video常见属性video标签有一些常见的属性。    常见属性 属性值 属性描述     src 绝对值或者相对值 视频地址   pos">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-08-14T07:18:29.924Z">
+<meta property="og:updated_time" content="2017-08-31T07:33:58.368Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="移动端video标签的坑">
 <meta name="twitter:description" content="video标签简介html5中的video的标签，使得页面中使用视频变得简单了很多，与引入图片的方式类似，我们使用video标签指定src属性即可引入视频。 video用法1&amp;lt;video src=&quot;test.mp4&quot;&amp;gt;&amp;lt;/video&amp;gt; video常见属性video标签有一些常见的属性。    常见属性 属性值 属性描述     src 绝对值或者相对值 视频地址   pos">
@@ -420,6 +420,7 @@
 <p>如果我们不想通过css来控制，通过js来让视频100%显示，那么我们就需要获取videoWidth和videoHeight来获取，理论上，我们在loadedmetadata事件执行回调中可以拿到这个值，等比缩放就可以了，如果获取不到，我们使用css控制视频居中显示。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var video = document.getElementById(<span class="string">'xxx'</span>);</div><div class="line">video.addEventlistener(<span class="string">'loadedmetadata'</span>, <span class="keyword">function</span>(event)&#123;</div><div class="line">	var videoHeight = event.target.videoHeight;</div><div class="line">	<span class="keyword">if</span> (videoHeight) &#123;</div><div class="line">		// 调整播放器的宽高，以保证和视频实际宽高一致。</div><div class="line">	&#125; <span class="keyword">else</span> &#123;</div><div class="line">		// 设置object-fit属性值为cover</div><div class="line">	&#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
 <p>使用video标签的时候，videoWidth和videoHeight获取有兼容问题，我们可以通过css来兼容处理，保证最好的视觉显示，可以通过100%来自动比例缩放，而如果播放器固定大小时，我们通过object-fit控制视频居中显示。</p>
+<h4 id="android端video播放后层级提高"><a href="#android端video播放后层级提高" class="headerlink" title="android端video播放后层级提高"></a>android端video播放后层级提高</h4><p>移动端使用video引入视频后，当播放时，video会默认将层级调整至最高，从而覆盖别的高层级。<br>这个问题暂时还没有很好的解决方案。</p>
 
       
     </div>
@@ -453,6 +454,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/08/17/图片轮播组件的一些心得/" rel="prev" title="图片轮播组件的一些心得">
+                图片轮播组件的一些心得 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -529,7 +534,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -568,7 +573,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#video标签简介"><span class="nav-number">1.</span> <span class="nav-text">video标签简介</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#video用法"><span class="nav-number">1.1.</span> <span class="nav-text">video用法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#video常见属性"><span class="nav-number">1.2.</span> <span class="nav-text">video常见属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#属性的兼容性和值的选择"><span class="nav-number">1.3.</span> <span class="nav-text">属性的兼容性和值的选择</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#poster属性"><span class="nav-number">1.3.1.</span> <span class="nav-text">poster属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#autoplay属性"><span class="nav-number">1.3.2.</span> <span class="nav-text">autoplay属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#preload属性"><span class="nav-number">1.3.3.</span> <span class="nav-text">preload属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#视频的宽高值"><span class="nav-number">1.3.4.</span> <span class="nav-text">视频的宽高值</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#video标签简介"><span class="nav-number">1.</span> <span class="nav-text">video标签简介</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#video用法"><span class="nav-number">1.1.</span> <span class="nav-text">video用法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#video常见属性"><span class="nav-number">1.2.</span> <span class="nav-text">video常见属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#属性的兼容性和值的选择"><span class="nav-number">1.3.</span> <span class="nav-text">属性的兼容性和值的选择</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#poster属性"><span class="nav-number">1.3.1.</span> <span class="nav-text">poster属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#autoplay属性"><span class="nav-number">1.3.2.</span> <span class="nav-text">autoplay属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#preload属性"><span class="nav-number">1.3.3.</span> <span class="nav-text">preload属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#视频的宽高值"><span class="nav-number">1.3.4.</span> <span class="nav-text">视频的宽高值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#android端video播放后层级提高"><span class="nav-number">1.3.5.</span> <span class="nav-text">android端video播放后层级提高</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
